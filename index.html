@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pinoy Tech Guide — simple, practical technology guides for Filipino readers.">
+<title>Pinoy Tech Guide</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f7fb;color:#18202a;line-height:1.6}
+header{background:#111827;color:white;padding:18px 20px;position:sticky;top:0;z-index:5}
+.nav{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-size:1.25rem;font-weight:800}.logo span{color:#60a5fa}
+nav a{color:#dbeafe;text-decoration:none;margin-left:16px;font-size:.95rem}
+.hero{background:linear-gradient(135deg,#172554,#2563eb);color:white;padding:70px 20px}
+.hero-inner{max-width:1050px;margin:auto}.tag{font-weight:700;color:#bfdbfe;text-transform:uppercase;letter-spacing:1px;font-size:.8rem}
+h1{font-size:clamp(2.1rem,6vw,4rem);line-height:1.05;margin:10px 0 16px}
+.hero p{max-width:650px;color:#e0ecff;font-size:1.08rem}
+.search{margin-top:25px;display:flex;max-width:600px}.search input{flex:1;padding:14px;border:0;border-radius:9px 0 0 9px;font-size:1rem}.search button{border:0;background:#0f172a;color:white;padding:0 20px;border-radius:0 9px 9px 0;font-weight:700}
+main{max-width:1050px;margin:0 auto;padding:45px 20px}
+.section-title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.section-title h2{margin:0;font-size:1.7rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid #e5e7eb;border-radius:15px;padding:22px;box-shadow:0 5px 18px #00000008}.icon{font-size:2rem}.card h3{margin:8px 0}.card p{color:#5b6470}.read{color:#2563eb;font-weight:700;text-decoration:none}
+.ad{min-height:100px;margin:35px 0;border:2px dashed #cbd5e1;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#94a3b8;background:#f8fafc}
+.about{background:white;border-radius:15px;padding:28px;border:1px solid #e5e7eb}
+footer{background:#111827;color:#cbd5e1;padding:35px 20px;text-align:center;margin-top:20px}
+footer a{color:#93c5fd;text-decoration:none}
+@media(max-width:760px){nav{display:none}.grid{grid-template-columns:1fr}.hero{padding:55px 20px}.search input{min-width:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="logo">Pinoy <span>Tech Guide</span></div>
+    <nav><a href="#guides">Guides</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="tag">Practical tech help for Filipinos</div>
+    <h1>Tech made easier.</h1>
+    <p>Simple guides for phones, computers, gaming, internet problems, and everyday technology.</p>
+    <div class="search">
+      <input id="searchBox" type="search" placeholder="Search guides..." aria-label="Search guides">
+      <button onclick="searchGuides()">Search</button>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="section-title" id="guides">
+    <h2>Latest Guides</h2>
+    <span id="resultCount"></span>
+  </div>
+
+  <div class="grid" id="cards">
+    <article class="card" data-search="samsung android phone tips battery">
+      <div class="icon">📱</div>
+      <h3>How to Make Your Android Phone Last Longer</h3>
+      <p>Simple settings and habits that can help you get more from your phone.</p>
+      <a class="read" href="#">Read guide →</a>
+    </article>
+    <article class="card" data-search="wifi internet slow connection troubleshooting">
+      <div class="icon">📶</div>
+      <h3>What to Check When Wi‑Fi Is Slow</h3>
+      <p>A beginner-friendly checklist for common connection problems.</p>
+      <a class="read" href="#">Read guide →</a>
+    </article>
+    <article class="card" data-search="pc laptop buying computer">
+      <div class="icon">💻</div>
+      <h3>What to Check Before Buying a Laptop</h3>
+      <p>Learn the basics of RAM, storage, processors, displays, and battery life.</p>
+      <a class="read" href="#">Read guide →</a>
+    </article>
+    <article class="card" data-search="gaming mlbb mobile legends performance">
+      <div class="icon">🎮</div>
+      <h3>Beginner Tips for Better Mobile Gaming</h3>
+      <p>Practical ways to improve your gaming experience without expensive upgrades.</p>
+      <a class="read" href="#">Read guide →</a>
+    </article>
+    <article class="card" data-search="privacy security phone account">
+      <div class="icon">🔐</div>
+      <h3>Basic Phone Privacy Tips</h3>
+      <p>Easy steps for protecting your accounts and personal information.</p>
+      <a class="read" href="#">Read guide →</a>
+    </article>
+    <article class="card" data-search="ai school students productivity">
+      <div class="icon">🤖</div>
+      <h3>Using AI for Schoolwork Responsibly</h3>
+      <p>Ideas for using AI as a learning tool while still doing your own work.</p>
+      <a class="read" href="#">Read guide →</a>
+    </article>
+  </div>
+
+  <div class="ad">Future advertising space</div>
+
+  <section class="about" id="about">
+    <h2>About Pinoy Tech Guide</h2>
+    <p>Pinoy Tech Guide is a planned resource for straightforward technology tips and tutorials. The goal is to explain everyday tech in simple language, with Filipino users in mind.</p>
+    <p><strong>Note:</strong> This is the first prototype. Articles, images, contact details, and monetization can be added as the site grows.</p>
+  </section>
+</main>
+
+<footer id="contact">
+  <p>© 2026 Pinoy Tech Guide · Built as a beginner website project</p>
+  <p><a href="mailto:hello@example.com">Contact</a></p>
+</footer>
+
+<script>
+function searchGuides(){
+  const q=document.getElementById('searchBox').value.trim().toLowerCase();
+  const cards=[...document.querySelectorAll('.card')];
+  let shown=0;
+  cards.forEach(c=>{
+    const match=!q || c.dataset.search.includes(q) || c.innerText.toLowerCase().includes(q);
+    c.style.display=match?'block':'none';
+    if(match) shown++;
+  });
+  document.getElementById('resultCount').textContent=q ? `${shown} result${shown===1?'':'s'}` : '';
+}
+document.getElementById('searchBox').addEventListener('keydown',e=>{if(e.key==='Enter')searchGuides()});
+</script>
+</body>
+</html>
